@@ -5,9 +5,9 @@ spring:
   application:
     name: account-service
   datasource:
-    url: jdbc:mysql://192.168.80.230:3306/dev
-    username: root
-    password: root123
+    url: jdbc:mysql://10.60.150.192:3306/dev
+    username: zhouwan
+    password: 940828
     driver-class-name: com.mysql.jdbc.Driver
     
 eureka:
