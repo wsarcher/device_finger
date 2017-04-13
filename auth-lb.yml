@@ -5,9 +5,9 @@ spring:
   application:
     name: auth-lb
   datasource:
-    url: jdbc:mysql://192.168.80.230:3306/dev
-    username: root
-    password: root123
+    url: jdbc:mysql://10.60.150.192:3306/dev
+    username: zhouwan
+    password: 940828
     driver-class-name: com.mysql.jdbc.Driver
       
 eureka:
@@ -24,4 +24,4 @@ eureka:
     preferIpAddress: true
   client:
     serviceUrl:
-      defaultZone: http://192.168.80.230:8761/eureka/
+      defaultZone: http://10.60.150.192:8761/eureka/
