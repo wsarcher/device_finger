@@ -1,0 +1,50 @@
+server:
+  port: 8080
+  
+spring:
+  application:
+    name: api-gateway
+  data:
+    mongodb:
+      uri: mongodb://192.168.80.230
+ 
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:8761/eureka/  
+
+zuul:
+  routes:
+    load-balance: /api/user/**
+    account-lb: /api/account/**
+    auth-lb: /api/device/**
+    strongauth-lb: /api/strongauth/**
+    sentemail-lb: /api/email/**
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 50000
+
+sentemail-lb:
+  ribbon:
+    ReadTimeout: 50000
+
+auth-lb:
+  ribbon:
+    ReadTimeout: 50000
+
+---
+spring:
+  profiles: docker
+eureka:
+  instance:
+    preferIpAddress: true
+  client:
+    serviceUrl:
+      defaultZone: http://192.168.80.230:8761/eureka/
