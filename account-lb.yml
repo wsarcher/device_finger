@@ -24,4 +24,4 @@ eureka:
     preferIpAddress: true
   client:
     serviceUrl:
-      defaultZone: http://192.168.80.230:8761/eureka/
+      defaultZone: http://10.60.150.192:8761/eureka/
