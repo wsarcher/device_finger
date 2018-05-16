@@ -22,6 +22,7 @@ zuul:
     auth-lb: /api/device/**
     strongauth-lb: /api/strongauth/**
     sentemail-lb: /api/email/**
+    behaviour-service: /api/behaviour/**
 
 hystrix:
   command:
