@@ -9,7 +9,9 @@ spring:
     username: zhouwan
     password: 940828
     driver-class-name: com.mysql.jdbc.Driver
-    
+    tomcat:
+      initSQL: SET NAMES utf8mb4 COLLATE utf8mb4_unicode_ci
+        
 eureka:
   instance:
     hostname: localhost
