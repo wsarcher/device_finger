@@ -5,9 +5,9 @@ spring:
   application:
     name: behaviour-service
   datasource:
-    url: jdbc:mysql://10.60.150.153:3306/behaviour
+    url: jdbc:mysql://10.60.150.44:3306/behaviour
     username: root
-    password: root123
+    password: Tongji@2020
     driver-class-name: com.mysql.jdbc.Driver
     
 eureka:
@@ -25,4 +25,4 @@ eureka:
     preferIpAddress: true
   client:
     serviceUrl:
-      defaultZone: http://10.60.150.192:8761/eureka/
+      defaultZone: http://10.60.150.45:8761/eureka/
